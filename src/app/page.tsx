@@ -1,9 +1,21 @@
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AgentBuilderSection from "@/components/AgentBuilderSection";
+import ControlSection from "@/components/ControlSection";
+import TimelineSection from "@/components/TimelineSection";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
-      <p className="text-muted-foreground">
-        Clone target not yet built. Run <code className="font-mono text-foreground">/clone-website</code> to start.
-      </p>
+    <main className="mirret-page-gradient min-h-screen">
+      <Navbar />
+      <HeroSection />
+      <AgentBuilderSection />
+      <ControlSection />
+      <TimelineSection />
+      <CTASection />
+      <Footer />
     </main>
   );
 }
