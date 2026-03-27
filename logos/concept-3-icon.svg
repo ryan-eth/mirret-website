@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!--
+    Concept 3: "Vigilance" — Complete redesign
+
+    An abstract eye/lens form built from geometric strokes.
+    Two converging angular brackets frame a diamond-shaped
+    "iris" at the center — suggesting focused scanning and
+    vigilant monitoring.
+
+    The outer brackets also subtly echo the peaks of an M.
+    The overall effect is an abstract, geometric eye that
+    feels technical and precise, not literal or illustrative.
+  -->
+  <!-- Left bracket / outer scan line -->
+  <path d="
+    M 4 32
+    L 20 8
+    L 26 8
+    L 12 30
+    L 12 34
+    L 26 56
+    L 20 56
+    Z
+  " fill="#06b6d4" opacity="0.7"/>
+  <!-- Right bracket / outer scan line -->
+  <path d="
+    M 60 32
+    L 44 8
+    L 38 8
+    L 52 30
+    L 52 34
+    L 38 56
+    L 44 56
+    Z
+  " fill="#06b6d4" opacity="0.7"/>
+  <!-- Central diamond — the iris/focus point -->
+  <path d="
+    M 32 16
+    L 44 32
+    L 32 48
+    L 20 32
+    Z
+  " fill="#06b6d4"/>
+  <!-- Inner cutout to make it a diamond ring -->
+  <path d="
+    M 32 24
+    L 38 32
+    L 32 40
+    L 26 32
+    Z
+  " fill="#0f0e0d"/>
+</svg>

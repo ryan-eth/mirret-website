@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Concept 2: Surface Prism — White monochrome -->
+  <path d="M 10 32 L 22 8 L 34 32 L 22 56 Z" fill="#1a1a1a" opacity="0.30"/>
+  <path d="M 20 32 L 32 6 L 44 32 L 32 58 Z" fill="#1a1a1a" opacity="0.50"/>
+  <path d="M 30 32 L 42 8 L 54 32 L 42 56 Z" fill="#1a1a1a" opacity="0.80"/>
+</svg>

@@ -1,30 +1,5 @@
 import Image from "next/image";
-
-function MirretLogo() {
-  return (
-    <div className="flex items-center gap-2">
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 2L3 7V12C3 17.25 6.75 22.13 12 23C17.25 22.13 21 17.25 21 12V7L12 2Z"
-          fill="white"
-        />
-        <path
-          d="M10 15.17L7.41 12.59L6 14L10 18L18 10L16.59 8.59L10 15.17Z"
-          fill="#0f0e0d"
-        />
-      </svg>
-      <span className="text-white text-lg font-medium tracking-tight">
-        Mirret
-      </span>
-    </div>
-  );
-}
+import MirretLogo from "@/components/MirretLogo";
 
 function XIcon() {
   return (

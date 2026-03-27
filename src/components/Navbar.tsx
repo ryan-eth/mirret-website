@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/lib/utils";
+import MirretLogo from "@/components/MirretLogo";
 
 function ChevronDown({ className }: { className?: string }) {
   return (
@@ -23,48 +24,15 @@ function ChevronDown({ className }: { className?: string }) {
   );
 }
 
-function MirretLogo() {
-  return (
-    <a href="/" className="flex items-center gap-2">
-      {/* White shield outline with checkmark */}
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12 3L4 7V12C4 16.4 7.4 20.5 12 21.5C16.6 20.5 20 16.4 20 12V7L12 3Z"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M9 12L11 14L15 10"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <span
-        className="text-white text-lg font-medium tracking-tight"
-      >
-        Mirret
-      </span>
-    </a>
-  );
-}
-
 export default function Navbar() {
   return (
     <nav className="fixed top-5 left-0 right-0 z-50 h-[54px]">
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
         {/* Left section: Logo + Nav links */}
         <div className="flex items-center gap-10">
-          <MirretLogo />
+          <a href="/">
+            <MirretLogo size={24} showText />
+          </a>
 
           {/* Nav links - hidden below md */}
           <div className="hidden items-center gap-8 md:flex">
@@ -107,7 +75,7 @@ export default function Navbar() {
               "transition-all duration-200 hover:bg-white hover:text-[#0f0e0d]"
             )}
           >
-            Get a Quote
+            Talk to us
           </a>
         </div>
       </div>

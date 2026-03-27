@@ -1,24 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-function ShieldIcon({ className }: { className?: string }) {
-  return (
-    <svg
-      width="16"
-      height="16"
-      viewBox="0 0 16 16"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-    >
-      <path
-        d="M8 1.5L2.5 4V8C2.5 11.2 4.9 14 8 14.5C11.1 14 13.5 11.2 13.5 8V4L8 1.5Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
+import { MirretMark } from "@/components/MirretLogo";
 
 function RadarIcon() {
   return (
@@ -134,7 +117,7 @@ export default function HeroSection() {
     <section className="relative pt-[140px]">
       {/* Part 1: Surface Monitor Label */}
       <div className="flex items-center justify-center gap-2">
-        <ShieldIcon className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 bg-clip-text text-cyan-400" />
+        <MirretMark size={18} />
         <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 bg-clip-text text-sm font-medium text-transparent">
           Surface Monitor
         </span>

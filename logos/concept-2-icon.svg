@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!--
+    Concept 2: "Surface Prism" — Refined
+
+    Three overlapping diamond/rhombus shapes arranged to form
+    a faceted, prismatic M-like silhouette. Each diamond represents
+    a layer of the attack surface being analyzed. The overlapping
+    creates rich depth through transparency.
+
+    The three diamonds are staggered: left leaning, center upright,
+    right leaning — creating an M rhythm when read together.
+  -->
+  <!-- Left diamond — back layer -->
+  <path d="M 10 32 L 22 8 L 34 32 L 22 56 Z" fill="#06b6d4" opacity="0.40"/>
+  <!-- Center diamond — middle layer, largest -->
+  <path d="M 20 32 L 32 6 L 44 32 L 32 58 Z" fill="#06b6d4" opacity="0.60"/>
+  <!-- Right diamond — front layer -->
+  <path d="M 30 32 L 42 8 L 54 32 L 42 56 Z" fill="#06b6d4" opacity="0.90"/>
+</svg>
