@@ -45,15 +45,15 @@ export default function Navbar() {
               Platform
               <ChevronDown className="mt-px" />
             </button>
-            <button
+            <a
+              href="/company"
               className={cn(
-                "flex items-center gap-1.5 text-sm font-normal text-white/[0.87]",
+                "text-sm font-normal text-white/[0.87]",
                 "transition-opacity duration-200 hover:opacity-70"
               )}
             >
               Company
-              <ChevronDown className="mt-px" />
-            </button>
+            </a>
           </div>
         </div>
 
