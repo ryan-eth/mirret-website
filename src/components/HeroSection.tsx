@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { MirretMark } from "@/components/MirretLogo";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 function RadarIcon() {
   return (
     <svg
@@ -168,7 +170,7 @@ export default function HeroSection() {
             playsInline
             className="h-[120%] w-[120%] object-cover opacity-50 saturate-[0.5] hue-rotate-[160deg]"
           >
-            <source src="/videos/hero-video.mp4" type="video/mp4" />
+            <source src={`${basePath}/videos/hero-video.mp4`} type="video/mp4" />
           </video>
         </div>
 
