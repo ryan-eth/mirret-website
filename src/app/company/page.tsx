@@ -8,36 +8,11 @@ export const metadata = {
     "Mirret is an AI-native cybersecurity agency building the systems that find what attackers hope you never notice.",
 };
 
-function Section({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
+function P({ children }: { children: React.ReactNode }) {
   return (
-    <section className={`mx-auto max-w-[680px] px-6 ${className ?? ""}`}>
-      {children}
-    </section>
-  );
-}
-
-function Paragraph({ children }: { children: React.ReactNode }) {
-  return (
-    <p className="mb-6 text-[17px] leading-[1.8] text-white/[0.72]">
+    <p className="mb-7 text-[17px] leading-[1.85] text-white/[0.72]">
       {children}
     </p>
-  );
-}
-
-function Heading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2
-      className="mb-8 mt-20 text-[32px] font-light leading-[1.2] text-white md:text-[40px]"
-      style={{ fontFamily: "var(--font-emilio)" }}
-    >
-      {children}
-    </h2>
   );
 }
 
@@ -46,256 +21,258 @@ export default function CompanyPage() {
     <main className="mirret-page-gradient min-h-screen">
       <Navbar />
 
-      {/* Hero */}
-      <div className="pt-[160px] pb-16">
-        <Section>
-          <div className="mb-8 flex items-center gap-2">
-            <MirretMark size={20} />
-            <span className="text-sm font-medium tracking-wide text-cyan-400">
-              Company
-            </span>
-          </div>
+      <article className="mx-auto max-w-[660px] px-6 pt-[160px] pb-24">
+        <div className="mb-10 flex items-center gap-2">
+          <MirretMark size={20} />
+          <span className="text-sm font-medium tracking-wide text-cyan-400">
+            Company
+          </span>
+        </div>
 
-          <h1
-            className="mb-10 text-[40px] font-light leading-[1.15] text-white md:text-[56px]"
-            style={{ fontFamily: "var(--font-emilio)" }}
-          >
-            The internet has an impersonation problem. We built the infrastructure to fight it.
-          </h1>
+        <h1
+          className="mb-14 text-[38px] font-light leading-[1.18] text-white md:text-[52px]"
+          style={{ fontFamily: "var(--font-emilio)" }}
+        >
+          What we do and why
+        </h1>
 
-          <Paragraph>
-            Here is something most security companies won&apos;t tell you: the
-            perimeter isn&apos;t where you think it is. Your firewall, your SOC,
-            your endpoint agents — they protect what&apos;s inside. But the
-            attack surface that matters most is the one you don&apos;t control.
-            It&apos;s every domain that looks like yours. Every fake storefront
-            selling under your name. Every ad redirecting your customers to
-            someone else&apos;s checkout page.
-          </Paragraph>
+        <P>
+          Most of the interesting problems in security right now aren&apos;t
+          inside the network. They&apos;re outside it. I don&apos;t mean
+          &ldquo;cloud security&rdquo; or &ldquo;zero trust&rdquo; or whatever
+          the latest Gartner quadrant says you should worry about. I mean
+          something more basic: someone is out there right now, pretending to be
+          your company, and your customers can&apos;t tell the difference.
+        </P>
 
-          <Paragraph>
-            That surface is enormous, it changes every day, and almost nobody is
-            watching it properly.
-          </Paragraph>
+        <P>
+          That probably sounds dramatic. It isn&apos;t. If you run any brand
+          with meaningful online revenue, there are almost certainly fake
+          versions of your website live right now. Lookalike domains.
+          Counterfeit storefronts on marketplaces. Ads in search results
+          pointing to checkout pages you&apos;ve never seen. The attackers
+          clone your visual identity, your copy, sometimes even your customer
+          support flow. Then they wait.
+        </P>
 
-          <Paragraph>
-            Mirret exists because we think that&apos;s broken.
-          </Paragraph>
-        </Section>
-      </div>
+        <P>
+          The weird thing is how little attention this gets. Companies spend
+          millions on endpoint protection and SOC analysts and penetration
+          testing, then completely ignore the fact that someone is running a
+          pixel-perfect copy of their login page on a domain registered
+          yesterday. It&apos;s like installing an expensive alarm system and
+          leaving the front door wide open.
+        </P>
 
-      {/* The Problem */}
-      <Section>
-        <Heading>The shape of the problem</Heading>
+        <P>
+          We started Mirret because we kept seeing this and it bothered us.
+        </P>
 
-        <Paragraph>
-          The conventional approach to external threats goes like this: a
-          customer reports a phishing site. Your legal team sends a
-          cease-and-desist. Three weeks later, maybe the domain is down. By
-          then, the attacker has spun up four more.
-        </Paragraph>
+        <h2
+          className="mb-8 mt-20 text-[28px] font-light leading-[1.25] text-white md:text-[36px]"
+          style={{ fontFamily: "var(--font-emilio)" }}
+        >
+          The actual problem
+        </h2>
 
-        <Paragraph>
-          This is not a legal problem. It&apos;s an engineering problem. And
-          legal tools are catastrophically slow for engineering problems.
-        </Paragraph>
+        <P>
+          Here&apos;s what usually happens. A customer emails support saying
+          they got scammed by what they thought was your company. Someone on the
+          security team Googles around and finds the phishing page. Legal sends a
+          cease-and-desist to the domain registrar. Two to four weeks later, the
+          page might come down. By then the attacker has moved to a new domain.
+          Often several.
+        </P>
 
-        <Paragraph>
-          The reason most companies lose at this game is not that they lack
-          resources. It&apos;s that they&apos;re playing it manually, in a
-          domain that rewards automation. Every hour a fraudulent page stays
-          live, real people lose real money. The economics are simple and brutal:
-          attackers who automate will always outrun defenders who don&apos;t.
-        </Paragraph>
+        <P>
+          This is a terrible way to solve the problem and everyone involved
+          knows it. But it persists because the tooling is bad. The existing
+          options are mostly dashboards that show you threats and then leave you
+          to deal with them. Which, if you think about it, is a strange product
+          to sell. &ldquo;Here&apos;s a list of people defrauding your
+          customers. Good luck.&rdquo;
+        </P>
 
-        <Paragraph>
-          We decided to stop playing that game and build a different one.
-        </Paragraph>
-      </Section>
+        <P>
+          What you actually want is for the threats to go away. That&apos;s a
+          different product entirely. It means someone has to scan continuously,
+          verify that what they found is actually malicious (not a legitimate
+          reseller or partner), and then file takedowns through the right
+          channels with the right evidence. And keep filing until it&apos;s
+          resolved. And do this for hundreds of threats simultaneously across
+          domains, marketplaces, social platforms, and ad networks.
+        </P>
 
-      {/* What We Are */}
-      <Section>
-        <Heading>AI-native, not AI-adjacent</Heading>
+        <P>
+          No human team can do that at the speed and scale required. But
+          software can do most of it, if you build the software right.
+        </P>
 
-        <Paragraph>
-          There&apos;s a meaningful distinction between companies that bolt AI
-          onto existing products and companies that are built from the ground up
-          around what AI makes newly possible. Mirret is the second kind.
-        </Paragraph>
+        <h2
+          className="mb-8 mt-20 text-[28px] font-light leading-[1.25] text-white md:text-[36px]"
+          style={{ fontFamily: "var(--font-emilio)" }}
+        >
+          Why AI-native matters
+        </h2>
 
-        <Paragraph>
-          Every system we build starts with the same question: what can a machine
-          do continuously that a human could only do in spot checks? The answer
-          turns out to be almost everything in external attack surface
-          management. Scanning certificate transparency logs. Diffing DNS
-          records. Classifying visual similarity between a real brand page and a
-          fake one. Determining whether a newly registered domain is a legitimate
-          partner or a threat. Prioritising which takedown to file first based on
-          active financial harm.
-        </Paragraph>
+        <P>
+          There&apos;s a thing that happens in every industry when a new
+          technology arrives. The incumbents bolt it onto their existing product
+          and call it innovation. The interesting companies are the ones that
+          ask a different question: what would we build if we started from
+          scratch, knowing this technology existed?
+        </P>
 
-        <Paragraph>
-          None of this requires creativity. All of it requires precision at
-          scale. That&apos;s exactly the shape of problem AI was built to solve.
-        </Paragraph>
+        <P>
+          For external attack surface management, the answer is surprisingly
+          clear. Almost everything in the workflow &mdash; scanning certificate
+          transparency logs, diffing DNS records, scoring visual similarity
+          between a real page and a fake one, classifying whether a new domain
+          registration is benign or hostile &mdash; is pattern recognition at
+          scale. It&apos;s exactly what machine learning is good at. Not
+          &ldquo;AI&rdquo; in the chatbot sense. AI in the boring, useful
+          sense: systems that classify and prioritise faster than any human
+          analyst could.
+        </P>
 
-        <Paragraph>
-          What does require human judgement is the last mile — understanding
-          context, making enforcement decisions that account for business
-          relationships, knowing when to escalate and when to wait. So
-          that&apos;s where we put the humans. Not at the scanning stage. Not at
-          the classification stage. At the decision stage, where they actually
-          add value.
-        </Paragraph>
-      </Section>
+        <P>
+          The part that does need humans is judgement. Is this domain a threat
+          or a legitimate franchise partner? Should we escalate to the registrar
+          or the payment processor first? Is this worth waking someone up for at
+          2am? You need experienced people making those calls. You just
+          don&apos;t need them doing the scanning and classification that
+          happens before those calls get made.
+        </P>
 
-      {/* How We Work */}
-      <Section>
-        <Heading>Software with opinions</Heading>
+        <P>
+          So that&apos;s how we built Mirret. Machines do the searching.
+          Humans do the deciding. It seems obvious when you say it that way, but
+          most companies in this space have it backwards. They use humans for
+          the grunt work and then wonder why they can&apos;t keep up.
+        </P>
 
-        <Paragraph>
-          We are not a dashboard company. We don&apos;t give you a login and
-          wish you luck. The reason is simple: dashboards transfer the problem
-          back to you. You still have to check it, interpret it, and act on it.
-          That&apos;s the same workflow you already had, just with a nicer UI.
-        </Paragraph>
+        <h2
+          className="mb-8 mt-20 text-[28px] font-light leading-[1.25] text-white md:text-[36px]"
+          style={{ fontFamily: "var(--font-emilio)" }}
+        >
+          How we actually work
+        </h2>
 
-        <Paragraph>
-          Mirret is a managed service built on proprietary software. We run the
-          scans. We verify the threats. We file the takedowns. You get a weekly
-          report: here&apos;s what we found, here&apos;s what we did, here&apos;s
-          the result. If something is urgent, you hear from us immediately.
-        </Paragraph>
+        <P>
+          We&apos;re a managed service. That means we don&apos;t hand you a
+          dashboard and disappear. We run the scans, verify the threats, file
+          the takedowns, and send you a report every week: here&apos;s what we
+          found, here&apos;s what we did about it, here&apos;s the outcome.
+        </P>
 
-        <Paragraph>
-          This is an opinionated architecture. We chose it because we think the
-          gap between &ldquo;detecting a threat&rdquo; and &ldquo;resolving a
-          threat&rdquo; is where most security products fail. Detection without
-          resolution is just expensive anxiety. We close the loop.
-        </Paragraph>
+        <P>
+          I should be honest about something: we can&apos;t guarantee every
+          takedown succeeds. Platforms make the final call. What we can do is
+          file through the right channels with the right evidence, follow up
+          persistently, and escalate when the standard path isn&apos;t working.
+          In practice this resolves the vast majority of cases. When it
+          doesn&apos;t, we tell you straight and figure out the next move
+          together.
+        </P>
 
-        <Paragraph>
-          A note on honesty: we file takedowns, but platforms make final
-          decisions. We can&apos;t guarantee removal and we don&apos;t pretend
-          to. What we can guarantee is speed, persistence, and the right
-          escalation path for every type of threat. Most of the time, that&apos;s
-          enough. When it isn&apos;t, we tell you directly and help you decide
-          what&apos;s next.
-        </Paragraph>
-      </Section>
+        <P>
+          The reason we chose managed service over self-service is a belief
+          about where this market is going. Most companies don&apos;t want
+          another security tool to manage. They want the problem solved. If your
+          house has a termite problem, you don&apos;t want a termite detection
+          dashboard. You want someone to show up and deal with the termites.
+        </P>
 
-      {/* The Craft */}
-      <Section>
-        <Heading>The craft of building for adversaries</Heading>
+        <h2
+          className="mb-8 mt-20 text-[28px] font-light leading-[1.25] text-white md:text-[36px]"
+          style={{ fontFamily: "var(--font-emilio)" }}
+        >
+          On building for adversaries
+        </h2>
 
-        <Paragraph>
-          Building security software is different from building other software in
-          one fundamental way: your users are trying to break things, and your
-          adversaries are actively trying to evade you. The ground shifts under
-          your feet every day.
-        </Paragraph>
+        <P>
+          There&apos;s something I find genuinely interesting about building
+          security software, which is that you&apos;re building against an
+          opponent who adapts. In most software, if your code works today it
+          will probably work tomorrow. In security, if your detection works
+          today, someone is already figuring out how to evade it tomorrow.
+        </P>
 
-        <Paragraph>
-          This is why we obsess over engineering quality. Sloppy code in a CRUD
-          app means a bad user experience. Sloppy code in a detection engine
-          means a threat slips through and someone&apos;s customers get
-          defrauded. The margin for error is thinner than in almost any other
-          kind of software.
-        </Paragraph>
+        <P>
+          This changes how you have to think about engineering. You can&apos;t
+          ship something and move on. You&apos;re in a continuous loop of
+          detecting new evasion techniques, updating your models, measuring
+          whether the updates actually work, and doing it again. It&apos;s more
+          like running a competitive game server than building a SaaS product.
+        </P>
 
-        <Paragraph>
-          We build in small, focused teams. We ship continuously. We instrument
-          everything because in adversarial systems, the only way to know
-          you&apos;re winning is to measure relentlessly. Our detection rates,
-          our false positive rates, our time-to-takedown — these aren&apos;t
-          vanity metrics. They&apos;re the scoreboard.
-        </Paragraph>
-      </Section>
+        <P>
+          We measure everything because we have to. Detection rates, false
+          positive rates, time from detection to takedown filing, time from
+          filing to resolution. These numbers are how we know whether
+          we&apos;re winning or losing. There&apos;s no way to fake it.
+        </P>
 
-      {/* Who We Serve */}
-      <Section>
-        <Heading>Who we work with</Heading>
+        <h2
+          className="mb-8 mt-20 text-[28px] font-light leading-[1.25] text-white md:text-[36px]"
+          style={{ fontFamily: "var(--font-emilio)" }}
+        >
+          Why now
+        </h2>
 
-        <Paragraph>
-          Our clients range from mid-market e-commerce brands to enterprise
-          financial services companies. What they share is a common realisation:
-          their brand is being weaponised against their own customers, and
-          the traditional tools aren&apos;t keeping up.
-        </Paragraph>
+        <P>
+          Two things happened recently that made this company possible.
+        </P>
 
-        <Paragraph>
-          We work across the full attack surface — lookalike domains, counterfeit
-          marketplace listings, fake social media accounts, phishing pages,
-          fraudulent ads, unauthorised use of brand assets in search results. If
-          someone is pretending to be you on the internet, we find them, verify
-          the threat, and get them taken down.
-        </Paragraph>
+        <P>
+          The first is that generative AI made impersonation absurdly easy. A
+          few years ago, cloning a brand&apos;s website required some skill.
+          Now you can do it in an afternoon with off-the-shelf tools. The
+          volume of impersonation we see across our client base has grown
+          significantly, and the quality of the fakes has gotten much better.
+          This is going to get worse before it gets better.
+        </P>
 
-        <Paragraph>
-          The work is different for every client because the attack surface is
-          different for every client. A fintech company faces different threats
-          than a luxury retailer. We adapt the scanning, the rules, the
-          prioritisation — not because we&apos;re a consultancy, but because the
-          software is designed to be configured that way.
-        </Paragraph>
-      </Section>
+        <P>
+          The second is that the same AI capabilities that make attacks easier
+          also make automated defence possible at a scale that wasn&apos;t
+          feasible before. Visual similarity scoring, natural language
+          classification of page intent, continuous monitoring across millions
+          of data points &mdash; the building blocks exist now. They just need
+          to be assembled by people who understand both the security domain and
+          the AI tooling.
+        </P>
 
-      {/* Why Now */}
-      <Section>
-        <Heading>Why this matters now</Heading>
+        <P>
+          That&apos;s us. Or at least, we&apos;re trying to be.
+        </P>
 
-        <Paragraph>
-          Two things changed recently that made Mirret possible and necessary.
-        </Paragraph>
+        <h2
+          className="mb-8 mt-20 text-[28px] font-light leading-[1.25] text-white md:text-[36px]"
+          style={{ fontFamily: "var(--font-emilio)" }}
+        >
+          The name
+        </h2>
 
-        <Paragraph>
-          First, generative AI made impersonation trivially easy. You can now
-          clone a brand&apos;s entire visual identity — website, email
-          templates, customer support scripts — in hours. From what we see
-          across our client base, the volume of impersonation attacks has
-          grown dramatically in the past two years, and it&apos;s accelerating.
-        </Paragraph>
+        <P>
+          Mirret comes from &ldquo;mirror.&rdquo; The whole problem is about
+          reflections &mdash; someone creating a copy of your brand to trick
+          your customers. We find the copies. Then we take them down.
+        </P>
 
-        <Paragraph>
-          Second, the same AI capabilities that enable attacks also enable
-          defence at scale. Pattern recognition across millions of domains.
-          Visual similarity scoring. Natural language classification of page
-          intent. The tools to fight back finally exist — but only if you build
-          for them natively, not as an afterthought.
-        </Paragraph>
-
-        <Paragraph>
-          We are in a window where the companies that build AI-native defence
-          systems will define the category. In five years, every serious brand
-          will have continuous external threat monitoring. The question is
-          whether that monitoring will be good enough to actually protect people.
-          We intend it to be.
-        </Paragraph>
-      </Section>
-
-      {/* The Name */}
-      <Section className="pb-24">
-        <Heading>On the name</Heading>
-
-        <Paragraph>
-          Mirret is derived from &ldquo;mirror.&rdquo; The entire problem we
-          solve is about reflections — someone creating a mirror of your brand
-          to deceive your customers. We find the mirrors. Then we break them.
-        </Paragraph>
-
-        <div className="mt-16 border-t border-white/[0.08] pt-12">
-          <p className="text-sm text-white/[0.45]">
-            If your brand is being impersonated, or you suspect it might be,
-            we&apos;ll run a free scan and show you what we find.
+        <div className="mt-20 border-t border-white/[0.08] pt-12">
+          <p className="text-[15px] leading-[1.7] text-white/[0.5]">
+            If you think your brand might be getting impersonated, we&apos;ll
+            run a free scan and show you what we find. No sales call required.
           </p>
           <a
             href="https://report.mirret.co.uk"
-            className="mt-4 inline-block rounded-full bg-white px-7 py-3 text-[15px] font-medium text-[#0f0e0d] transition-opacity duration-200 hover:opacity-90"
+            className="mt-5 inline-block rounded-full bg-white px-7 py-3 text-[15px] font-medium text-[#0f0e0d] transition-opacity duration-200 hover:opacity-90"
           >
             Generate Free Report
           </a>
         </div>
-      </Section>
+      </article>
 
       <Footer />
     </main>
