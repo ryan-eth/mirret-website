@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!--
+    Concept 1: "Mirror Facet" — v3
+
+    Two mirrored chevron halves of an M. The left is solid cyan,
+    the right is a lighter transparency — creating the "original vs.
+    reflection" metaphor. A 4px gap between halves forms the mirror axis.
+
+    The angled inner edges and peaked tops give it a faceted, precision
+    quality. Strong silhouette at all sizes.
+  -->
+  <!-- Left half of M — the original -->
+  <path d="
+    M 6 54
+    L 6 12
+    L 13 8
+    L 29 40
+    L 29 54
+    L 22 54
+    L 22 42
+    L 13 22
+    L 13 54
+    Z
+  " fill="#06b6d4"/>
+  <!-- Right half of M — the reflection -->
+  <path d="
+    M 58 54
+    L 58 12
+    L 51 8
+    L 35 40
+    L 35 54
+    L 42 54
+    L 42 42
+    L 51 22
+    L 51 54
+    Z
+  " fill="#06b6d4" opacity="0.48"/>
+</svg>

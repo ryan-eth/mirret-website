@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   description:
     "Mirret delivers AI-native external attack surface management that detects brand impersonation, verifies threats, and enforces takedowns at scale.",
   icons: {
-    icon: "/seo/favicon.png",
+    icon: "/seo/favicon.svg",
   },
   openGraph: {
     images: ["/seo/og-image.png"],
