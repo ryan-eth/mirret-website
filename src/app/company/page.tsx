@@ -3,9 +3,14 @@ import Footer from "@/components/Footer";
 import { MirretMark } from "@/components/MirretLogo";
 
 export const metadata = {
-  title: "Company - Mirret",
+  title: "Company",
   description:
     "Mirret is an AI-native cybersecurity agency building the systems that find what attackers hope you never notice.",
+  openGraph: {
+    title: "Company | Mirret",
+    description:
+      "The internet has an impersonation problem. We built the infrastructure to fight it.",
+  },
 };
 
 function P({ children }: { children: React.ReactNode }) {

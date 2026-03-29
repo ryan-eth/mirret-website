@@ -9,6 +9,7 @@ function XIcon() {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
       <path
         d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
@@ -26,6 +27,7 @@ function LinkedInIcon() {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
       <path
         d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
@@ -35,9 +37,55 @@ function LinkedInIcon() {
   );
 }
 
-const productLinks = ["Surface Monitor", "Threat Reports", "Free Brand Scan", "API Access"];
-const companyLinks = ["About", "Contact", "Security"];
-const resourceLinks = ["Blog", "Privacy Policy", "Terms of Service"];
+const productLinks = [
+  { label: "Surface Monitor", href: "/" },
+  { label: "Threat Reports", href: "mailto:hello@mirret.co.uk?subject=Threat%20Reports%20Demo" },
+  { label: "Free Brand Scan", href: "https://report.mirret.co.uk" },
+  { label: "API Access", href: "mailto:hello@mirret.co.uk?subject=API%20Access" },
+];
+
+const companyLinks = [
+  { label: "About", href: "/company" },
+  { label: "Contact", href: "mailto:hello@mirret.co.uk" },
+  { label: "Security", href: "mailto:hello@mirret.co.uk?subject=Security%20Inquiry" },
+];
+
+const resourceLinks = [
+  { label: "Blog", href: "/company" },
+  { label: "Privacy Policy", href: "https://mirret.co.uk/privacy" },
+  { label: "Terms of Service", href: "https://mirret.co.uk/terms" },
+];
+
+function FooterLinkColumn({
+  title,
+  links,
+}: {
+  title: string;
+  links: { label: string; href: string }[];
+}) {
+  return (
+    <div>
+      <h4 className="mb-4 text-[11px] uppercase tracking-[0.15em] text-white/[0.45]">
+        {title}
+      </h4>
+      <ul className="flex flex-col">
+        {links.map((link) => (
+          <li key={link.label}>
+            <a
+              href={link.href}
+              {...(link.href.startsWith("http") || link.href.startsWith("mailto")
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              className="text-sm leading-[2.2] text-white/[0.61] transition-colors duration-200 hover:text-white"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
@@ -47,11 +95,13 @@ export default function Footer() {
         <div className="flex flex-col justify-between gap-12 md:flex-row">
           {/* Left column */}
           <div className="flex flex-col gap-5">
-            <MirretLogo />
+            <a href="/">
+              <MirretLogo />
+            </a>
 
             {/* Compliant label */}
             <div className="flex items-center gap-2">
-              <span className="inline-block h-2 w-2 rounded-full bg-[#a3e635]" />
+              <span className="inline-block h-2 w-2 rounded-full bg-[#a3e635]" aria-hidden="true" />
               <span className="text-[11px] uppercase tracking-[0.15em] text-white/[0.45]">
                 Compliant
               </span>
@@ -61,21 +111,21 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <Image
                 src="/images/compliance-badge-1.png"
-                alt="Compliance badge"
+                alt="SOC 2 compliance badge"
                 width={40}
                 height={40}
                 className="rounded-full border border-white/[0.12]"
               />
               <Image
                 src="/images/compliance-badge-2.png"
-                alt="Compliance badge"
+                alt="ISO 27001 compliance badge"
                 width={40}
                 height={40}
                 className="rounded-full border border-white/[0.12]"
               />
               <Image
                 src="/images/compliance-badge-3.png"
-                alt="Compliance badge"
+                alt="GDPR compliance badge"
                 width={40}
                 height={40}
                 className="rounded-full border border-white/[0.12]"
@@ -86,83 +136,34 @@ export default function Footer() {
 
           {/* Right side: Link columns */}
           <div className="grid grid-cols-2 gap-10 md:grid-cols-3 md:gap-16">
-            {/* Product */}
-            <div>
-              <h4 className="mb-4 text-[11px] uppercase tracking-[0.15em] text-white/[0.45]">
-                Product
-              </h4>
-              <ul className="flex flex-col">
-                {productLinks.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm leading-[2.2] text-white/[0.61] transition-opacity duration-200 hover:text-white"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="mb-4 text-[11px] uppercase tracking-[0.15em] text-white/[0.45]">
-                Company
-              </h4>
-              <ul className="flex flex-col">
-                {companyLinks.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm leading-[2.2] text-white/[0.61] transition-opacity duration-200 hover:text-white"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="mb-4 text-[11px] uppercase tracking-[0.15em] text-white/[0.45]">
-                Resources
-              </h4>
-              <ul className="flex flex-col">
-                {resourceLinks.map((link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-sm leading-[2.2] text-white/[0.61] transition-opacity duration-200 hover:text-white"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <FooterLinkColumn title="Product" links={productLinks} />
+            <FooterLinkColumn title="Company" links={companyLinks} />
+            <FooterLinkColumn title="Resources" links={resourceLinks} />
           </div>
         </div>
 
         {/* Row 2: Bottom bar */}
         <div className="mt-10 flex items-center justify-between border-t border-white/[0.08] pt-6">
           <p className="text-[13px] text-white/[0.45]">
-            &copy; 2026 Mirret Ltd.
+            &copy; {new Date().getFullYear()} Mirret Ltd.
           </p>
           <div className="flex items-center gap-3 text-white/[0.45]">
             <a
-              href="#"
-              className="transition-opacity duration-200 hover:text-white"
-              aria-label="X (Twitter)"
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-200 hover:text-white"
+              aria-label="Follow Mirret on X"
             >
               <XIcon />
             </a>
-            <span className="text-white/[0.2]">|</span>
+            <span className="text-white/[0.2]" aria-hidden="true">|</span>
             <a
-              href="#"
-              className="transition-opacity duration-200 hover:text-white"
-              aria-label="LinkedIn"
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors duration-200 hover:text-white"
+              aria-label="Follow Mirret on LinkedIn"
             >
               <LinkedInIcon />
             </a>

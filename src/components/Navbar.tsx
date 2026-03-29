@@ -60,16 +60,9 @@ export default function Navbar() {
         {/* Right section */}
         <div className="flex items-center gap-5">
           <a
-            href="#"
-            className={cn(
-              "hidden text-sm text-white/[0.87] md:inline-block",
-              "transition-opacity duration-200 hover:opacity-70"
-            )}
-          >
-            Client Portal
-          </a>
-          <a
-            href="#"
+            href="https://calendly.com/luke-mirret-zn4c/15"
+            target="_blank"
+            rel="noopener noreferrer"
             className={cn(
               "rounded-full border border-white/30 px-5 py-2 text-sm font-medium text-white",
               "transition-all duration-200 hover:bg-white hover:text-[#0f0e0d]"

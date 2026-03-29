@@ -32,14 +32,54 @@ const emilioLight = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Surface Monitor - Mirret",
+  metadataBase: new URL("https://mirret.co.uk"),
+  title: {
+    default: "Mirret — AI-Native External Attack Surface Management",
+    template: "%s | Mirret",
+  },
   description:
     "Mirret delivers AI-native external attack surface management that detects brand impersonation, verifies threats, and enforces takedowns at scale.",
+  keywords: [
+    "attack surface management",
+    "brand impersonation",
+    "cybersecurity",
+    "EASM",
+    "domain monitoring",
+    "takedown",
+    "brand protection",
+  ],
+  authors: [{ name: "Mirret Ltd." }],
   icons: {
     icon: "/seo/favicon.svg",
+    apple: "/seo/favicon.png",
   },
   openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: "https://mirret.co.uk",
+    siteName: "Mirret",
+    title: "Mirret — AI-Native External Attack Surface Management",
+    description:
+      "Detect brand impersonation, verify threats, and enforce takedowns at scale.",
+    images: [
+      {
+        url: "/seo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mirret — Surface Monitor",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mirret — AI-Native External Attack Surface Management",
+    description:
+      "Detect brand impersonation, verify threats, and enforce takedowns at scale.",
     images: ["/seo/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
