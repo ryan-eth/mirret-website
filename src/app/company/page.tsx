@@ -272,7 +272,9 @@ export default function CompanyPage() {
           </p>
           <a
             href="https://report.mirret.co.uk"
-            className="mt-5 inline-block rounded-full bg-white px-7 py-3 text-[15px] font-medium text-[#0f0e0d] transition-opacity duration-200 hover:opacity-90"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-block rounded-full bg-white px-8 py-3.5 text-[15px] font-medium text-[#0f0e0d] transition-opacity duration-200 hover:opacity-90"
           >
             Generate Free Report
           </a>

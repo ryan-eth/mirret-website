@@ -27,7 +27,7 @@ function ChevronDown({ className }: { className?: string }) {
 export default function Navbar() {
   return (
     <nav className="fixed top-5 left-0 right-0 z-50 h-[54px]">
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
+      <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-6">
         {/* Left section: Logo + Nav links */}
         <div className="flex items-center gap-10">
           <a href="/">
@@ -38,7 +38,7 @@ export default function Navbar() {
           <div className="hidden items-center gap-8 md:flex">
             <button
               className={cn(
-                "flex items-center gap-1.5 text-sm font-normal text-white/[0.87]",
+                "flex items-center gap-1.5 text-sm font-normal text-white/[0.87] cursor-pointer",
                 "transition-opacity duration-200 hover:opacity-70"
               )}
             >

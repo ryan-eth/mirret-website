@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 interface MirretLogoProps {
   size?: number;
   showText?: boolean;
@@ -35,7 +37,7 @@ export default function MirretLogo({
   className,
 }: MirretLogoProps) {
   return (
-    <div className={`flex items-center gap-2 ${className ?? ""}`}>
+    <div className={cn("flex items-center gap-2", className)}>
       <MirretMark size={size} />
       {showText && (
         <span className="text-lg font-medium tracking-tight text-white">

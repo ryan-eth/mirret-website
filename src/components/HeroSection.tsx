@@ -13,6 +13,7 @@ function RadarIcon() {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
       <path d="M12 12V2" stroke="white" strokeOpacity="0.6" strokeWidth="1.5" strokeLinecap="round" />
       <path d="M12 12L18.9 18.9" stroke="white" strokeOpacity="0.6" strokeWidth="1.5" strokeLinecap="round" />
@@ -30,6 +31,7 @@ function ShieldCheckIcon() {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
       <path
         d="M12 3L4 7V12C4 16.4 7.4 20.5 12 21.5C16.6 20.5 20 16.4 20 12V7L12 3Z"
@@ -59,6 +61,7 @@ function GavelIcon() {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
     >
       <path
         d="M14.5 3.5L20.5 9.5L18.5 11.5L12.5 5.5L14.5 3.5Z"
@@ -127,8 +130,7 @@ export default function HeroSection() {
 
       {/* Part 2: Main Heading */}
       <h1
-        className="mx-auto mt-6 max-w-[800px] text-center text-[36px] leading-[1.1] font-light text-white md:text-[60px]"
-        style={{ fontFamily: "var(--font-emilio)" }}
+        className="mx-auto mt-6 max-w-[800px] text-center text-[36px] leading-[1.1] font-light text-white md:text-[60px] font-heading"
       >
         See every threat to your brand before it reaches your customers
       </h1>
@@ -168,6 +170,7 @@ export default function HeroSection() {
             loop
             muted
             playsInline
+            aria-hidden="true"
             className="h-[120%] w-[120%] object-cover opacity-50 saturate-[0.5] hue-rotate-[160deg]"
           >
             <source src={`${basePath}/videos/hero-video.mp4`} type="video/mp4" />

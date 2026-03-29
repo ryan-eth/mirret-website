@@ -1,6 +1,6 @@
 function CodeEditorMockup() {
   return (
-    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }}>
+    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }} aria-hidden="true">
       {/* Top bar */}
       <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.06]">
         <div className="flex items-center gap-3">
@@ -200,7 +200,7 @@ function CodeEditorMockup() {
 
 function TestResultsMockup() {
   return (
-    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }}>
+    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }} aria-hidden="true">
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.06]">
         <div className="flex items-center gap-3">
@@ -213,7 +213,7 @@ function TestResultsMockup() {
         <h4 className="text-[15px] font-medium text-white mb-4">Scan results</h4>
 
         {/* Three stat boxes */}
-        <div className="flex gap-3 mb-5">
+        <div className="flex flex-col sm:flex-row gap-3 mb-5">
           {/* Pass Rate */}
           <div className="flex-1 rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-3">
             <p className="text-[11px] text-white/40 mb-1">Detection Rate</p>
@@ -287,8 +287,7 @@ export default function ControlSection() {
       <div className="mx-auto max-w-[1200px]">
         {/* Section heading */}
         <h2
-          className="text-white font-light text-[44px] leading-[1.15] mb-10 max-w-[550px]"
-          style={{ fontFamily: "var(--font-emilio)" }}
+          className="text-white font-light text-[28px] md:text-[44px] leading-[1.15] mb-10 max-w-[550px] font-heading"
         >
           See exactly what threats are targeting your brand
         </h2>
@@ -297,19 +296,11 @@ export default function ControlSection() {
         <div className="flex flex-col md:flex-row gap-5">
           {/* Card 1: Precise Customization */}
           <div
-            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06]"
-            style={{
-              background:
-                "linear-gradient(rgba(38, 40, 40, 0.8) 0%, rgba(22, 23, 23, 0.8) 100%)",
-            }}
+            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06] mirret-card-gradient"
           >
-            {/* Warm amber glow at bottom */}
+            {/* Cyan glow at bottom */}
             <div
-              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%]"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
-              }}
+              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%] mirret-card-glow"
             />
             <div className="relative z-10 px-6 pt-8 pb-0">
               <p className="text-[11px] uppercase tracking-[0.15em] text-white/45 mb-3">
@@ -329,19 +320,11 @@ export default function ControlSection() {
 
           {/* Card 2: Refine As You Go */}
           <div
-            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06]"
-            style={{
-              background:
-                "linear-gradient(rgba(38, 40, 40, 0.8) 0%, rgba(22, 23, 23, 0.8) 100%)",
-            }}
+            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06] mirret-card-gradient"
           >
-            {/* Warm amber glow at bottom */}
+            {/* Cyan glow at bottom */}
             <div
-              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%]"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
-              }}
+              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%] mirret-card-glow"
             />
             <div className="relative z-10 px-6 pt-8 pb-0">
               <p className="text-[11px] uppercase tracking-[0.15em] text-white/45 mb-3">

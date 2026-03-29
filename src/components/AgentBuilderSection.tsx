@@ -1,6 +1,6 @@
 function ChatIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <circle cx="8" cy="8" r="7" fill="#06b6d4" />
       <circle cx="8" cy="8" r="3" fill="#fff" fillOpacity={0.3} />
     </svg>
@@ -9,7 +9,7 @@ function ChatIcon() {
 
 function FileIconDoc() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
       <rect x="4" y="2" width="20" height="24" rx="3" fill="#2563eb" fillOpacity={0.15} stroke="#3b82f6" strokeOpacity={0.4} strokeWidth="1" />
       <line x1="9" y1="9" x2="19" y2="9" stroke="#60a5fa" strokeOpacity={0.5} strokeWidth="1.2" strokeLinecap="round" />
       <line x1="9" y1="13" x2="17" y2="13" stroke="#60a5fa" strokeOpacity={0.5} strokeWidth="1.2" strokeLinecap="round" />
@@ -20,7 +20,7 @@ function FileIconDoc() {
 
 function FileIconImage() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
       <rect x="4" y="2" width="20" height="24" rx="3" fill="#16a34a" fillOpacity={0.15} stroke="#22c55e" strokeOpacity={0.4} strokeWidth="1" />
       <circle cx="11" cy="11" r="2" stroke="#4ade80" strokeOpacity={0.5} strokeWidth="1" />
       <path d="M7 20L12 14L16 18L19 15L23 20" stroke="#4ade80" strokeOpacity={0.5} strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
@@ -30,7 +30,7 @@ function FileIconImage() {
 
 function FileIconSpreadsheet() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
       <rect x="4" y="2" width="20" height="24" rx="3" fill="#16a34a" fillOpacity={0.15} stroke="#22c55e" strokeOpacity={0.4} strokeWidth="1" />
       <rect x="8" y="8" width="5" height="4" rx="0.5" stroke="#4ade80" strokeOpacity={0.5} strokeWidth="0.8" />
       <rect x="15" y="8" width="5" height="4" rx="0.5" stroke="#4ade80" strokeOpacity={0.5} strokeWidth="0.8" />
@@ -42,7 +42,7 @@ function FileIconSpreadsheet() {
 
 function FileIconPdf() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
       <rect x="4" y="2" width="20" height="24" rx="3" fill="#dc2626" fillOpacity={0.15} stroke="#ef4444" strokeOpacity={0.4} strokeWidth="1" />
       <text x="14" y="17" textAnchor="middle" fill="#f87171" fillOpacity={0.6} fontSize="7" fontWeight="600" fontFamily="sans-serif">PDF</text>
     </svg>
@@ -51,7 +51,7 @@ function FileIconPdf() {
 
 function FileIconCode() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
       <rect x="4" y="2" width="20" height="24" rx="3" fill="#7c3aed" fillOpacity={0.15} stroke="#8b5cf6" strokeOpacity={0.4} strokeWidth="1" />
       <path d="M11 10L8 14L11 18" stroke="#a78bfa" strokeOpacity={0.5} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M17 10L20 14L17 18" stroke="#a78bfa" strokeOpacity={0.5} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
@@ -61,7 +61,7 @@ function FileIconCode() {
 
 function FileIconGeneric() {
   return (
-    <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
       <rect x="4" y="2" width="20" height="24" rx="3" fill="#f59e0b" fillOpacity={0.15} stroke="#f59e0b" strokeOpacity={0.4} strokeWidth="1" />
       <circle cx="14" cy="12" r="3" stroke="#fbbf24" strokeOpacity={0.5} strokeWidth="1" />
       <line x1="14" y1="17" x2="14" y2="20" stroke="#fbbf24" strokeOpacity={0.5} strokeWidth="1" strokeLinecap="round" />
@@ -71,7 +71,7 @@ function FileIconGeneric() {
 
 function SendIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
       <path d="M14 2L7 9" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       <path d="M14 2L9.5 14L7 9L2 6.5L14 2Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
@@ -80,13 +80,13 @@ function SendIcon() {
 
 function CreateAgentMockup() {
   return (
-    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }}>
+    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }} aria-hidden="true">
       {/* Header */}
       <div className="px-5 pt-5 pb-4">
         <h4 className="text-[15px] font-medium text-white mb-4">New brand scan</h4>
 
         {/* Toggle buttons */}
-        <div className="flex gap-2 mb-5">
+        <div className="flex flex-wrap gap-2 mb-5">
           <div className="flex items-center gap-2 rounded-full bg-white px-4 py-1.5">
             <ChatIcon />
             <span className="text-[13px] font-medium text-[#191a1a]">Domains</span>
@@ -134,7 +134,7 @@ function CreateAgentMockup() {
 
 function SentinelChatMockup() {
   return (
-    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }}>
+    <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }} aria-hidden="true">
       {/* Header bar */}
       <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.06]">
         <div className="flex items-center gap-2">
@@ -201,8 +201,7 @@ export default function AgentBuilderSection() {
       <div className="mx-auto max-w-[1200px]">
         {/* Section heading */}
         <h2
-          className="text-white font-light text-[44px] leading-[1.15] mb-10 max-w-[550px]"
-          style={{ fontFamily: "var(--font-emilio)" }}
+          className="text-white font-light text-[28px] md:text-[44px] leading-[1.15] mb-10 max-w-[550px] font-heading"
         >
           Get full visibility of your attack surface in minutes
         </h2>
@@ -211,19 +210,11 @@ export default function AgentBuilderSection() {
         <div className="flex flex-col md:flex-row gap-5">
           {/* Card 1: Effortless Setup */}
           <div
-            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06]"
-            style={{
-              background:
-                "linear-gradient(rgba(38, 40, 40, 0.8) 0%, rgba(22, 23, 23, 0.8) 100%)",
-            }}
+            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06] mirret-card-gradient"
           >
-            {/* Warm amber glow at bottom */}
+            {/* Cyan glow at bottom */}
             <div
-              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%]"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
-              }}
+              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%] mirret-card-glow"
             />
             <div className="relative z-10 px-6 pt-8 pb-0">
               <p className="text-[11px] uppercase tracking-[0.15em] text-white/45 mb-3">
@@ -243,19 +234,11 @@ export default function AgentBuilderSection() {
 
           {/* Card 2: Easy Updates */}
           <div
-            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06]"
-            style={{
-              background:
-                "linear-gradient(rgba(38, 40, 40, 0.8) 0%, rgba(22, 23, 23, 0.8) 100%)",
-            }}
+            className="relative flex-1 rounded-2xl overflow-hidden border border-white/[0.06] mirret-card-gradient"
           >
-            {/* Warm amber glow at bottom */}
+            {/* Cyan glow at bottom */}
             <div
-              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%]"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 50% 100%, rgba(6, 182, 212, 0.15) 0%, transparent 70%)",
-              }}
+              className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%] mirret-card-glow"
             />
             <div className="relative z-10 px-6 pt-8 pb-0">
               <p className="text-[11px] uppercase tracking-[0.15em] text-white/45 mb-3">

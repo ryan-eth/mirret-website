@@ -8,8 +8,7 @@ export default function CTASection() {
         </span>
 
         <h2
-          className="mt-6 max-w-[650px] text-[36px] leading-[1.1] font-light text-white md:text-[52px]"
-          style={{ fontFamily: "var(--font-emilio)" }}
+          className="mt-6 max-w-[650px] text-[36px] leading-[1.1] font-light text-white md:text-[52px] font-heading"
         >
           Ready to see what&apos;s impersonating your brand right now?
         </h2>
@@ -29,8 +28,7 @@ export default function CTASection() {
       {/* Giant "Mirret" watermark */}
       <div className="pointer-events-none mt-10 flex items-center justify-center overflow-hidden">
         <span
-          className="select-none text-[200px] font-light text-white/[0.03] md:text-[300px] lg:text-[400px]"
-          style={{ fontFamily: "var(--font-emilio)" }}
+          className="select-none text-[120px] font-light text-white/[0.03] md:text-[300px] lg:text-[400px] font-heading"
           aria-hidden="true"
         >
           Mirret

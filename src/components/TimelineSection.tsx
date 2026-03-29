@@ -34,8 +34,7 @@ export default function TimelineSection() {
         </div>
 
         <h2
-          className="mt-5 text-[32px] font-light text-white md:text-[44px]"
-          style={{ fontFamily: "var(--font-emilio)" }}
+          className="mt-5 text-[32px] font-light text-white md:text-[44px] font-heading"
         >
           From zero to full coverage in days
         </h2>
