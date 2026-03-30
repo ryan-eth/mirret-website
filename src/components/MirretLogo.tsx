@@ -40,7 +40,7 @@ export default function MirretLogo({
     <div className={cn("flex items-center gap-2", className)}>
       <MirretMark size={size} />
       {showText && (
-        <span className="text-lg font-medium tracking-tight text-white">
+        <span className="text-xl font-light tracking-tight text-white font-heading">
           Mirret
         </span>
       )}
