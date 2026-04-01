@@ -47,28 +47,37 @@ export default function CompanyPage() {
         </h1>
 
         <P>
+          The most dangerous threat to most companies is not a
+          sophisticated hack. It&apos;s a copy.
+        </P>
+
+        <P>
+          Someone has registered a domain that looks like yours, cloned your
+          checkout page, and is taking payments from your customers right now.
+          This is not hypothetical. When we scan a new client, the median
+          finding is 11 domains impersonating their brand. About a third have
+          active payment pages. Nobody on the security team knew.
+        </P>
+
+        <P>
           There&apos;s a strange asymmetry in how companies think about
-          security. They spend enormous amounts of money protecting what&apos;s
-          inside their perimeter &mdash; endpoints, networks, cloud
-          infrastructure, employee credentials. All of that matters. But there
-          is an entire category of threat that exists completely outside the
-          perimeter, where none of those tools can see it, and most companies
-          have no systematic way of dealing with it at all.
+          security. They spend millions protecting what&apos;s inside their
+          perimeter &mdash; endpoints, networks, cloud infrastructure. All of
+          that matters. But there is an entire category of threat that exists
+          outside the perimeter, where none of those tools can see it. It&apos;s
+          like installing the best lock money can buy on your front door while
+          someone builds an identical house next door and welcomes your guests
+          inside.
         </P>
 
         <P>
-          I&apos;m talking about the external attack surface. Not your servers.
-          Not your code. The sprawling, ungoverned landscape of everything on
-          the internet that uses your name, resembles your brand, or touches
-          your customers while pretending to be you.
-        </P>
-
-        <P>
-          Lookalike domains registered overnight. Counterfeit storefronts on
+          That&apos;s the external attack surface. Not your servers. Not your
+          code. The sprawling landscape of everything on the internet that uses
+          your name, resembles your brand, or touches your customers while
+          pretending to be you. Lookalike domains. Counterfeit storefronts on
           marketplaces. Phishing pages that clone your login flow down to the
-          favicon. Paid ads in search results that redirect your customers to
-          checkout pages you&apos;ve never seen. Fake customer support accounts
-          on social platforms. Fraudulent mobile apps using your brand assets.
+          favicon. Paid ads redirecting your customers to checkout pages
+          you&apos;ve never seen. Fake support accounts on social platforms.
         </P>
 
         <P>
