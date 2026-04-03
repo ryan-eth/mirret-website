@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="mirret-page-gradient min-h-screen">
+    <main id="main-content" className="mirret-page-gradient min-h-screen">
       <Navbar />
       <HeroSection />
       <AgentBuilderSection />

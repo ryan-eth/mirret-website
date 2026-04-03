@@ -2,26 +2,26 @@ function CodeEditorMockup() {
   return (
     <div className="mt-6 rounded-t-xl overflow-hidden" style={{ background: "#191a1a" }} aria-hidden="true">
       {/* Top bar */}
-      <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.06]">
-        <div className="flex items-center gap-3">
-          <span className="text-[13px] text-white/80">Brand Protection Scanner</span>
-          <span className="rounded-full border border-white/10 px-2.5 py-0.5 text-[10px] text-white/45">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-white/[0.06] gap-2">
+        <div className="flex items-center gap-2 min-w-0 overflow-hidden">
+          <span className="text-[13px] text-white/80 shrink-0">Brand Protection Scanner</span>
+          <span className="hidden sm:inline-block rounded-full border border-white/10 px-2.5 py-0.5 text-[10px] text-white/50">
             All Sources
           </span>
-          <span className="rounded-full bg-green-500/20 px-2.5 py-0.5 text-[10px] text-green-400">
+          <span className="rounded-full bg-green-500/20 px-2.5 py-0.5 text-[10px] text-green-400 shrink-0">
             Active
           </span>
-          <span className="text-[11px] text-white/30">Last scan 3 min ago</span>
+          <span className="hidden sm:inline text-[11px] text-white/50 truncate">Last scan 3 min ago</span>
         </div>
-        <button className="rounded-lg bg-white px-3 py-1.5 text-[12px] font-medium text-[#191a1a]">
+        <span className="rounded-lg bg-white px-3 py-1.5 text-[12px] font-medium text-[#191a1a] shrink-0">
           Run scan
-        </button>
+        </span>
       </div>
 
       {/* Function header */}
       <div className="px-5 pt-4 pb-2">
-        <h4 className="text-[15px] font-medium text-white mb-0.5">Check Domain Similarity</h4>
-        <p className="text-[12px] text-white/40 mb-3">
+        <p className="text-[15px] font-medium text-white mb-0.5">Check Domain Similarity</p>
+        <p className="text-[12px] text-white/50 mb-3">
           Scores a candidate domain against protected brands using Levenshtein distance + visual similarity.
         </p>
 
@@ -30,24 +30,24 @@ function CodeEditorMockup() {
           <span className="text-[12px] text-white/80 border-b border-white/40 pb-1 mr-4">
             Rule
           </span>
-          <span className="text-[12px] text-white/30 pb-1 mr-4">Input Schema</span>
+          <span className="text-[12px] text-white/50 pb-1 mr-4">Input Schema</span>
         </div>
 
         {/* Sub-row */}
-        <div className="flex items-center gap-1 mb-3 text-[11px] text-white/30">
+        <div className="flex items-center gap-1 mb-3 text-[11px] text-white/50">
           <span className="text-white/50">Available checks:</span>
-          <span className="rounded border border-white/10 px-2 py-0.5 text-white/40">DNS Lookup</span>
-          <span className="rounded border border-white/10 px-2 py-0.5 text-white/40">
+          <span className="rounded border border-white/10 px-2 py-0.5 text-white/50">DNS Lookup</span>
+          <span className="rounded border border-white/10 px-2 py-0.5 text-white/50">
             WHOIS Query
           </span>
         </div>
       </div>
 
       {/* Code area */}
-      <div className="px-2 pb-1 overflow-hidden">
+      <div className="px-2 pb-1 overflow-hidden max-h-[200px] md:max-h-none">
         <div className="flex text-[12px] leading-[1.7] font-mono">
           {/* Line numbers */}
-          <div className="select-none pr-3 pl-3 text-right text-white/20 shrink-0">
+          <div className="select-none pr-3 pl-3 text-right text-white/50 shrink-0">
             {Array.from({ length: 20 }, (_, i) => (
               <div key={i}>{i + 1}</div>
             ))}
@@ -57,7 +57,7 @@ function CodeEditorMockup() {
           <div className="overflow-hidden">
             {/* Line 1: comment */}
             <div>
-              <span style={{ color: "#6b7280" }}>
+              <span style={{ color: "#9ca3af" }}>
                 # Scores domain similarity against protected brand names
               </span>
             </div>
@@ -82,12 +82,12 @@ function CodeEditorMockup() {
             </div>
             {/* Line 6: comment */}
             <div>
-              <span className="text-white/20">{"    "}</span>
-              <span style={{ color: "#6b7280" }}># Check domain registration</span>
+              <span className="text-white/50">{"    "}</span>
+              <span style={{ color: "#9ca3af" }}># Check domain registration</span>
             </div>
             {/* Line 7 */}
             <div>
-              <span className="text-white/20">{"    "}</span>
+              <span className="text-white/50">{"    "}</span>
               <span className="text-white">result</span>
               <span className="text-white/60"> = </span>
               <span style={{ color: "#a78bfa" }}>await </span>
@@ -98,7 +98,7 @@ function CodeEditorMockup() {
             <div>&nbsp;</div>
             {/* Line 9 */}
             <div>
-              <span className="text-white/20">{"    "}</span>
+              <span className="text-white/50">{"    "}</span>
               <span style={{ color: "#a78bfa" }}>if not </span>
               <span className="text-white">result.</span>
               <span style={{ color: "#60a5fa" }}>get</span>
@@ -108,7 +108,7 @@ function CodeEditorMockup() {
             </div>
             {/* Line 10 */}
             <div>
-              <span className="text-white/20">{"        "}</span>
+              <span className="text-white/50">{"        "}</span>
               <span className="text-white">threat_signals[</span>
               <span style={{ color: "#f59e0b" }}>&quot;status&quot;</span>
               <span className="text-white">]</span>
@@ -119,7 +119,7 @@ function CodeEditorMockup() {
             </div>
             {/* Line 11 */}
             <div>
-              <span className="text-white/20">{"        "}</span>
+              <span className="text-white/50">{"        "}</span>
               <span style={{ color: "#a78bfa" }}>return </span>
               <span className="text-white">{"{"}</span>
               <span style={{ color: "#f59e0b" }}>&quot;threat_signals&quot;</span>
@@ -131,7 +131,7 @@ function CodeEditorMockup() {
             <div>&nbsp;</div>
             {/* Line 13 */}
             <div>
-              <span className="text-white/20">{"    "}</span>
+              <span className="text-white/50">{"    "}</span>
               <span className="text-white">threat_signals[</span>
               <span style={{ color: "#f59e0b" }}>&quot;registrar&quot;</span>
               <span className="text-white">]</span>
@@ -142,7 +142,7 @@ function CodeEditorMockup() {
             </div>
             {/* Line 14 */}
             <div>
-              <span className="text-white/20">{"    "}</span>
+              <span className="text-white/50">{"    "}</span>
               <span className="text-white">threat_signals[</span>
               <span style={{ color: "#f59e0b" }}>&quot;created_date&quot;</span>
               <span className="text-white">]</span>
@@ -153,7 +153,7 @@ function CodeEditorMockup() {
             </div>
             {/* Line 15 */}
             <div>
-              <span className="text-white/20">{"    "}</span>
+              <span className="text-white/50">{"    "}</span>
               <span className="text-white">risk_score</span>
               <span className="text-white/60"> = </span>
               <span style={{ color: "#60a5fa" }}>calculate_similarity</span>
@@ -170,7 +170,7 @@ function CodeEditorMockup() {
             </div>
             {/* Line 18 */}
             <div>
-              <span className="text-white/20">{"    "}</span>
+              <span className="text-white/50">{"    "}</span>
               <span className="text-white">threat_signals[</span>
               <span style={{ color: "#f59e0b" }}>&quot;error&quot;</span>
               <span className="text-white">]</span>
@@ -205,71 +205,71 @@ function TestResultsMockup() {
       <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.06]">
         <div className="flex items-center gap-3">
           <span className="text-[13px] text-white/80">Brand Protection Scanner</span>
-          <span className="text-[11px] text-white/30">3 min ago</span>
+          <span className="text-[11px] text-white/50">3 min ago</span>
         </div>
       </div>
 
       <div className="px-5 pt-4 pb-4">
-        <h4 className="text-[15px] font-medium text-white mb-4">Scan results</h4>
+        <p className="text-[15px] font-medium text-white mb-4">Scan results</p>
 
         {/* Three stat boxes */}
         <div className="flex flex-col sm:flex-row gap-3 mb-5">
           {/* Pass Rate */}
           <div className="flex-1 rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-3">
-            <p className="text-[11px] text-white/40 mb-1">Detection Rate</p>
+            <p className="text-[11px] text-white/50 mb-1">Detection Rate</p>
             <p className="text-[32px] font-medium text-white leading-none mb-1">97%</p>
-            <p className="text-[10px] text-white/30">Based on 8,420 domains scanned</p>
+            <p className="text-[10px] text-white/50">Based on 8,420 domains scanned</p>
           </div>
 
           {/* Simulations passed */}
           <div className="flex-1 rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-3">
-            <p className="text-[11px] text-white/40 mb-1">Threats detected</p>
+            <p className="text-[11px] text-white/50 mb-1">Threats detected</p>
             <p className="text-[32px] font-medium text-white leading-none mb-1">142</p>
-            <p className="text-[10px] text-white/30">Across all monitored sources</p>
+            <p className="text-[10px] text-white/50">Across all monitored sources</p>
           </div>
 
           {/* Simulations failed */}
           <div className="flex-1 rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-3">
-            <p className="text-[11px] text-white/40 mb-1">Takedowns filed</p>
+            <p className="text-[11px] text-white/50 mb-1">Takedowns filed</p>
             <p className="text-[32px] font-medium text-white leading-none mb-1">38</p>
-            <p className="text-[10px] text-white/30">Enforcement actions initiated</p>
+            <p className="text-[10px] text-white/50">Enforcement actions initiated</p>
           </div>
         </div>
 
         {/* Table header */}
         <div className="flex items-center border-b border-white/[0.06] pb-2 mb-2">
-          <span className="flex-1 text-[11px] text-white/40">Threat category</span>
-          <span className="w-24 text-[11px] text-white/40 text-center">Status</span>
-          <span className="w-24 text-[11px] text-white/40 text-right">Detection rate</span>
+          <span className="flex-1 text-[11px] text-white/50">Threat category</span>
+          <span className="w-16 sm:w-24 text-[11px] text-white/50 text-center">Status</span>
+          <span className="w-12 sm:w-24 text-[11px] text-white/50 text-right">Rate</span>
         </div>
 
         {/* Sample rows */}
         <div className="flex items-center border-b border-white/[0.06] py-2">
           <span className="flex-1 text-[12px] text-white/60">Lookalike Domains</span>
-          <span className="w-24 text-center">
+          <span className="w-16 sm:w-24 text-center">
             <span className="inline-block rounded-full bg-green-500/15 px-2 py-0.5 text-[10px] text-green-400">
               Detected
             </span>
           </span>
-          <span className="w-24 text-[12px] text-white/60 text-right">99%</span>
+          <span className="w-12 sm:w-24 text-[12px] text-white/60 text-right">99%</span>
         </div>
         <div className="flex items-center border-b border-white/[0.06] py-2">
           <span className="flex-1 text-[12px] text-white/60">Phishing Pages</span>
-          <span className="w-24 text-center">
+          <span className="w-16 sm:w-24 text-center">
             <span className="inline-block rounded-full bg-green-500/15 px-2 py-0.5 text-[10px] text-green-400">
               Detected
             </span>
           </span>
-          <span className="w-24 text-[12px] text-white/60 text-right">97%</span>
+          <span className="w-12 sm:w-24 text-[12px] text-white/60 text-right">97%</span>
         </div>
         <div className="flex items-center py-2">
           <span className="flex-1 text-[12px] text-white/60">Counterfeit Stores</span>
-          <span className="w-24 text-center">
+          <span className="w-16 sm:w-24 text-center">
             <span className="inline-block rounded-full bg-green-500/15 px-2 py-0.5 text-[10px] text-green-400">
               Detected
             </span>
           </span>
-          <span className="w-24 text-[12px] text-white/60 text-right">94%</span>
+          <span className="w-12 sm:w-24 text-[12px] text-white/60 text-right">94%</span>
         </div>
       </div>
 
@@ -283,11 +283,11 @@ function TestResultsMockup() {
 
 export default function ControlSection() {
   return (
-    <section className="w-full px-6 py-20">
+    <section className="w-full px-6 py-12 md:py-20">
       <div className="mx-auto max-w-[1200px]">
         {/* Section heading */}
         <h2
-          className="text-white font-light text-[28px] md:text-[44px] leading-[1.15] mb-10 max-w-[550px] font-heading"
+          className="text-white font-normal text-[24px] md:text-[44px] md:font-light leading-[1.25] md:leading-[1.15] mb-10 max-w-[550px] font-heading"
         >
           See exactly what threats are targeting your brand
         </h2>
@@ -302,8 +302,8 @@ export default function ControlSection() {
             <div
               className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%] mirret-card-glow"
             />
-            <div className="relative z-10 px-6 pt-8 pb-0">
-              <p className="text-[11px] uppercase tracking-[0.15em] text-white/45 mb-3">
+            <div className="relative z-10 px-4 pt-6 pb-0 md:px-6 md:pt-8">
+              <p className="text-[12px] uppercase tracking-[0.15em] text-white/[0.55] mb-3">
                 Detection Rules
               </p>
               <h3
@@ -311,7 +311,7 @@ export default function ControlSection() {
               >
                 Precise detection
               </h3>
-              <p className="text-[14px] leading-relaxed text-white/[0.61] max-w-[400px] mb-0">
+              <p className="text-[15px] leading-relaxed text-white/[0.65] max-w-[400px] mb-0">
                 Define detection rules and threat thresholds with precision so Mirret catches exactly what matters to your brand.
               </p>
               <CodeEditorMockup />
@@ -326,8 +326,8 @@ export default function ControlSection() {
             <div
               className="pointer-events-none absolute bottom-0 left-0 right-0 h-[60%] mirret-card-glow"
             />
-            <div className="relative z-10 px-6 pt-8 pb-0">
-              <p className="text-[11px] uppercase tracking-[0.15em] text-white/45 mb-3">
+            <div className="relative z-10 px-4 pt-6 pb-0 md:px-6 md:pt-8">
+              <p className="text-[12px] uppercase tracking-[0.15em] text-white/[0.55] mb-3">
                 Scan Results
               </p>
               <h3
@@ -335,7 +335,7 @@ export default function ControlSection() {
               >
                 Real-time results
               </h3>
-              <p className="text-[14px] leading-relaxed text-white/[0.61] max-w-[400px] mb-0">
+              <p className="text-[15px] leading-relaxed text-white/[0.65] max-w-[400px] mb-0">
                 Every scan produces actionable results. Track detection rates, threat severity, and enforcement outcomes in real time.
               </p>
               <TestResultsMockup />

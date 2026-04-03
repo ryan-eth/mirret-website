@@ -5,17 +5,32 @@ import { MirretMark } from "@/components/MirretLogo";
 export const metadata = {
   title: "Company",
   description:
-    "Why the external attack surface is the most important problem in security that almost nobody is working on properly.",
+    "Why brand impersonation is the most expensive problem in e-commerce that almost nobody is watching.",
   openGraph: {
     title: "Company | Mirret",
     description:
-      "The attack surface that matters most is the one you don't control.",
+      "Someone built a store with your name on it. Your customers are shopping there right now.",
+    images: [
+      {
+        url: "/seo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mirret — Company",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image" as const,
+    title: "Company | Mirret",
+    description:
+      "Someone built a store with your name on it. Your customers are shopping there right now.",
+    images: ["/seo/og-image.png"],
   },
 };
 
 function P({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-7 text-[17px] leading-[1.85] text-white/[0.72]">
+    <p className="mb-7 text-base leading-[1.85] text-white/[0.72] md:text-[17px]">
       {children}
     </p>
   );
@@ -23,7 +38,7 @@ function P({ children }: { children: React.ReactNode }) {
 
 function H2({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="mb-8 mt-24 text-[28px] font-light leading-[1.25] text-white font-heading md:text-[36px]">
+    <h2 className="mb-8 mt-24 text-[24px] font-normal leading-[1.3] text-white font-heading md:text-[36px] md:font-light md:leading-[1.25]">
       {children}
     </h2>
   );
@@ -31,7 +46,7 @@ function H2({ children }: { children: React.ReactNode }) {
 
 export default function CompanyPage() {
   return (
-    <main className="mirret-page-gradient min-h-screen">
+    <main id="main-content" className="mirret-page-gradient min-h-screen">
       <Navbar />
 
       <article className="mx-auto max-w-[660px] px-6 pt-[160px] pb-24">
@@ -42,296 +57,357 @@ export default function CompanyPage() {
           </span>
         </div>
 
-        <h1 className="mb-14 text-[36px] font-light leading-[1.18] text-white font-heading md:text-[52px]">
-          The attack surface that matters most is the one you don&apos;t control
+        <h1 className="mb-14 text-[28px] font-normal leading-[1.25] text-white font-heading md:text-[52px] md:font-light md:leading-[1.18]">
+          Someone built a store with your name on it
         </h1>
 
         <P>
-          The most dangerous threat to most companies is not a
-          sophisticated hack. It&apos;s a copy.
+          The most dangerous thing about building a great brand is that
+          it makes you worth copying.
         </P>
 
         <P>
-          Someone has registered a domain that looks like yours, cloned your
-          checkout page, and is taking payments from your customers right now.
-          This is not hypothetical. When we scan a new client, the median
-          finding is 11 domains impersonating their brand. About a third have
-          active payment pages. Nobody on the security team knew.
+          Your customers trust your name. They recognize your checkout
+          flow, your product pages, your logo in a search result. That
+          recognition is the most valuable thing you own. It took years
+          to build. It takes about an afternoon to steal.
         </P>
 
         <P>
-          There&apos;s a strange asymmetry in how companies think about
-          security. They spend millions protecting what&apos;s inside their
-          perimeter &mdash; endpoints, networks, cloud infrastructure. All of
-          that matters. But there is an entire category of threat that exists
-          outside the perimeter, where none of those tools can see it. It&apos;s
-          like installing the best lock money can buy on your front door while
-          someone builds an identical house next door and welcomes your guests
-          inside.
+          Someone has registered a domain that looks like yours.
+          They&apos;ve cloned your storefront &mdash; product images,
+          copy, layout, even the favicon. They&apos;re running paid ads
+          against your brand name. Your customers click, see what looks
+          like your store, enter their payment information, and either
+          receive nothing or a cheap counterfeit. Then they blame you.
         </P>
 
         <P>
-          That&apos;s the external attack surface. Not your servers. Not your
-          code. The sprawling landscape of everything on the internet that uses
-          your name, resembles your brand, or touches your customers while
-          pretending to be you. Lookalike domains. Counterfeit storefronts on
-          marketplaces. Phishing pages that clone your login flow down to the
-          favicon. Paid ads redirecting your customers to checkout pages
-          you&apos;ve never seen. Fake support accounts on social platforms.
+          When we scan a new client, the median finding is 11 domains
+          impersonating their brand. About a third have active payment
+          pages. Nobody on the brand team knew.
+        </P>
+
+        <H2>What this actually costs</H2>
+
+        <P>
+          Every sale on a fake version of your store is a sale that should
+          have been yours. Across e-commerce, brand impersonation accounts
+          for $48 billion a year in fraud losses. By 2029, that number
+          will be $107 billion. 90% of online businesses have already
+          experienced measurable revenue loss from counterfeiting.
         </P>
 
         <P>
-          This is not a niche problem. Every company with meaningful online
-          presence has an external attack surface, and almost nobody is watching
-          it properly. The question is whether you find out about it from your
-          monitoring system or from an angry customer who just got defrauded.
-        </P>
-
-        <H2>Why this is a hard problem</H2>
-
-        <P>
-          The reason external attack surface management is genuinely difficult
-          &mdash; and not just a feature you bolt onto an existing security
-          product &mdash; is that it requires doing several things
-          simultaneously that are each hard on their own.
+          But the direct loss is the small part.
         </P>
 
         <P>
-          You have to scan continuously. Not weekly, not monthly. The internet
-          changes constantly. A domain registered at 2am on a Tuesday can be
-          serving a phishing page by 6am and defrauding customers by lunchtime.
-          If your scanning cadence is measured in days, you&apos;ve already lost.
+          The expensive part is what happens to your customers afterward.
+          79% of consumers stop buying from a brand after being defrauded
+          by a fake version of it. They don&apos;t distinguish between
+          &ldquo;I was scammed by someone pretending to be this
+          brand&rdquo; and &ldquo;this brand scammed me.&rdquo; To the
+          customer, it&apos;s the same thing. 38% sever ties completely.
+          33% actively tell friends and family not to buy from you.
         </P>
 
         <P>
-          You have to classify accurately. Not everything that looks suspicious
-          is actually a threat. That domain with your company name in it might be
-          a legitimate franchise partner, or a fan site, or a comparison blog.
-          If you file takedowns against legitimate sites, you burn your
-          credibility with registrars and platforms. Then when a real threat
-          appears, your requests get deprioritised. Getting classification
-          wrong is worse than not classifying at all.
+          Acquiring a new customer costs five to seven times more than
+          retaining an existing one. Every customer lost to a fake
+          checkout is a lifetime value that vanishes &mdash; and a
+          negative review, a social media post, or a warning to friends
+          that follows your brand around long after the scam site is gone.
         </P>
 
         <P>
-          And you have to actually resolve the threats. This is where most
-          approaches break down. Detection without resolution is just expensive
-          anxiety. You know there are 47 domains impersonating your brand. Now
-          what? Someone has to file the right kind of report to the right
-          platform through the right channel with the right evidence, follow
-          up when it stalls, escalate when the standard path doesn&apos;t work,
-          and do this across registrars, hosting providers, ad networks,
-          marketplaces, and social platforms simultaneously. Each with different
-          processes, different response times, and different evidentiary
-          requirements.
+          This isn&apos;t a problem reserved for Nike and Louis Vuitton.
+          Last year, over 6,000 fake sites impersonated Nike, Adidas, and
+          a hundred other brands across 3,000 domains. During Black
+          Friday, phishing attacks targeting shoppers spiked 620%.
+          Researchers uncovered thousands of near-perfect clone sites
+          mimicking everyone from Wayfair to Lululemon to Omaha Steaks.
+          If you sell anything online, you almost certainly have a shadow
+          storefront you don&apos;t know about.
+        </P>
+
+        <H2>The blind spot</H2>
+
+        <P>
+          Most brands have no idea how exposed they are.
         </P>
 
         <P>
-          No human team can do this well at scale. The operational complexity
-          is too high and the attack surface moves too fast. But if you build
-          the right software, you can automate the parts that are mechanical
-          and keep humans focused on the parts that require judgement.
+          66% of companies learn about brand impersonation from customer
+          complaints. Not from monitoring. Not from their security tools.
+          From an angry email or a one-star review from someone who got
+          burned. Only 6% of brands have effective protection against
+          impersonation. 53% say their existing tools don&apos;t address
+          the problem at all.
         </P>
 
         <P>
-          That&apos;s what Mirret does.
+          This makes sense when you think about it. Your firewall protects
+          your servers. Your fraud tools protect your checkout. Your
+          endpoint security protects your devices. None of them can see a
+          clone of your store running on someone else&apos;s
+          infrastructure, on a domain you&apos;ve never heard of,
+          targeting your customers through ads you never placed.
+        </P>
+
+        <P>
+          It&apos;s like installing the best security system money can buy
+          in your store while someone opens an identical store across the
+          street &mdash; your name, your signage, your product photos.
+          Your security system is excellent. It&apos;s also completely
+          irrelevant to the problem.
+        </P>
+
+        <P>
+          And the timing is brutal. 90% of the financial damage from a
+          fake site happens in the first 18 hours. The average manual
+          takedown takes over four business days. By the time someone on
+          your team confirms the threat and figures out who to contact,
+          most of the harm is already done.
+        </P>
+
+        <H2>What your customers actually experience</H2>
+
+        <P>
+          Now picture it from your customer&apos;s side. They search for
+          your brand. They click a result &mdash; maybe an organic
+          listing, maybe a paid ad. The page looks right. Your logo, your
+          colours, your product photography. The URL is close enough that
+          they don&apos;t look twice. They find the product they want,
+          probably at a slight discount. They check out.
+        </P>
+
+        <P>
+          The confirmation email looks real. Then nothing arrives. Or a
+          cheap imitation arrives. Or their credit card starts showing
+          charges they didn&apos;t authorize.
+        </P>
+
+        <P>
+          Now they&apos;re angry. And they&apos;re not angry at the
+          person who built the fake site. They&apos;re angry at you.
+        </P>
+
+        <P>
+          They contact your support team, who has no record of the order.
+          They leave a one-star review on your real store. They post about
+          it on social media. 37% of companies discover impersonation
+          through exactly this kind of public brand shaming. 92% of
+          consumers believe companies are responsible for protecting their
+          digital identity. Your customers don&apos;t see a cybercrime.
+          They see your brand failing to protect them.
+        </P>
+
+        <P>
+          Trust is a reservoir. It fills slowly and drains fast. 69% of
+          adults now abandon online checkouts over trust concerns. The
+          erosion spreads far beyond the individual victims. Every
+          publicized scam, every social media post from a defrauded
+          customer, makes the next legitimate buyer a little more hesitant
+          to click &ldquo;buy.&rdquo;
+        </P>
+
+        <H2>The regulatory shift</H2>
+
+        <P>
+          If the revenue and trust arguments don&apos;t move you, the
+          legal ones will.
+        </P>
+
+        <P>
+          The FTC&apos;s Impersonation Rule &mdash; the first new trade
+          regulation rule in over forty years &mdash; went into effect in
+          April 2024. It makes brand impersonation explicitly illegal with
+          penalties up to $53,088 per violation. In Europe, DORA requires
+          financial entities to report impersonation incidents within four
+          hours, with board-level criminal liability for non-compliance.
+          NIS2 covers critical infrastructure sectors with fines up to
+          EUR 10 million or 2% of global revenue.
+        </P>
+
+        <P>
+          These regulations create obligations that run both ways.
+          Platforms must do more to remove impersonation. But brands must
+          also demonstrate they are actively monitoring for threats
+          against their customers.
+        </P>
+
+        <P>
+          The number that should focus your attention: 48% of brands are
+          already aware of upcoming regulations that will legally require
+          them to reimburse customers who lose money to impersonation
+          attacks. Today, 81% of brands do not reimburse. That window is
+          closing. The question is whether you get ahead of this now or
+          scramble to respond after the first enforcement action.
         </P>
 
         <H2>The objections we hear</H2>
 
         <P>
-          When we talk to security leaders, we hear a few things repeatedly.
-          It&apos;s worth being honest about them because the objections are
-          reasonable, even when the conclusions aren&apos;t.
+          When we talk to brand and e-commerce leaders, we hear a few
+          things repeatedly. The objections are reasonable. The
+          conclusions usually aren&apos;t.
         </P>
 
         <P>
           <span className="text-white/[0.9]">
-            &ldquo;We already have a security team.&rdquo;
+            &ldquo;Our legal team handles takedowns.&rdquo;
           </span>
-          {" "}You do. And they&apos;re busy. They&apos;re managing your SIEM,
-          triaging alerts, running penetration tests, reviewing access controls,
-          responding to incidents. They are experts at protecting what&apos;s
-          inside the perimeter. But external attack surface monitoring is a
-          different discipline entirely. It requires different tools, different
-          data sources, different enforcement relationships. Asking your SOC
-          team to also monitor the entire internet for brand impersonation is
-          like asking your plumber to also do the electrical work. They&apos;re
-          both in your house, but they&apos;re different trades.
+          {" "}They do. And they&apos;re playing the most expensive game
+          of whack-a-mole in your organization. Manual takedowns average
+          over four business days. 90% of the damage happens in the first
+          18 hours. Even when a takedown succeeds, it removes one listing
+          or one page &mdash; the underlying infrastructure stays live.
+          The fake domain, the cloned site, the ad account. The attacker
+          creates new listings the next day. You need continuous automated
+          detection and enforcement, not a paralegal with a spreadsheet.
         </P>
 
         <P>
           <span className="text-white/[0.9]">
-            &ldquo;We use a threat intelligence platform.&rdquo;
+            &ldquo;We register defensive domains.&rdquo;
           </span>
-          {" "}Threat intel platforms are designed to aggregate and correlate
-          indicators of compromise &mdash; IP addresses, malware hashes, known
-          C2 infrastructure. They&apos;re essential tools. But they&apos;re
-          optimised for a different problem than external brand impersonation.
-          A lookalike domain serving a pixel-perfect copy of your checkout page
-          won&apos;t show up in a threat intel feed because it&apos;s not
-          malware. It&apos;s a clean website on a clean IP that happens to be
-          stealing your customers. It requires visual analysis, content
-          comparison, and brand context that threat intel platforms weren&apos;t
-          built to provide.
+          {" "}Defensive registration was a reasonable strategy when there
+          were a handful of top-level domains. There are now over 200,
+          with infinite permutations through lookalike characters, keyword
+          additions, and country-code variants. You cannot register your
+          way out of this. And domain registration doesn&apos;t cover
+          marketplace listings, paid ads on search engines, cloned
+          storefronts on other platforms, or fake social media accounts.
+          The surface area is much wider than the .com namespace.
         </P>
 
         <P>
           <span className="text-white/[0.9]">
-            &ldquo;This isn&apos;t a priority right now.&rdquo;
+            &ldquo;This isn&apos;t big enough to worry about.&rdquo;
           </span>
-          {" "}I understand that. Every security team is triaging against
-          limited resources. But I&apos;d ask this: do you know what your
-          external attack surface actually looks like right now? Because in
-          our experience, the answer is almost always worse than people expect.
-          When we run a scan for a new client, the median finding is 11
-          impersonating domains per brand. About a third of those have active
-          payment pages. The problem isn&apos;t that it&apos;s not a priority.
-          It&apos;s that you don&apos;t have visibility into how bad it is, so
-          it&apos;s hard to prioritise accurately. We&apos;ll run a free scan
-          for you. If there&apos;s nothing there, you&apos;ve lost nothing.
-          If there is, you&apos;ll have the data to make a real decision.
+          {" "}Do you actually know? In our experience, the answer is
+          always worse than people expect. The median finding when we scan
+          a new client is 11 impersonating domains per brand. About a
+          third of those have active payment pages. We&apos;ll run a free
+          scan for you. If there&apos;s nothing there, you&apos;ve lost
+          nothing. If there is, you&apos;ll have the data to make a real
+          decision.
         </P>
 
         <P>
           <span className="text-white/[0.9]">
-            &ldquo;Can you actually guarantee takedowns?&rdquo;
+            &ldquo;Our marketplace handles this.&rdquo;
           </span>
-          {" "}No. And anyone who tells you they can is lying. Platforms and
-          registrars make the final decision on whether to take content down.
-          What we can guarantee is speed, persistence, and the right escalation
-          path for every type of threat. We file through the correct channels
-          with properly documented evidence, we follow up until we get a
-          resolution, and we escalate through alternative channels when the
-          primary path stalls. In practice this resolves the vast majority of
-          cases. When it doesn&apos;t, we tell you directly and work with you
-          on the next step. But we won&apos;t pretend we have a magic button.
+          {" "}Platforms remove individual listings when reported.
+          That&apos;s necessary but not sufficient. The underlying
+          impersonation infrastructure &mdash; the domain, the cloned
+          site template, the payment collection &mdash; stays live.
+          Reporting a listing to Amazon treats one symptom. Meanwhile, the
+          same fake storefront is listing on eBay, running Google ads, and
+          operating its own standalone checkout. Platform reporting is one
+          channel. You need all of them working simultaneously.
         </P>
 
         <H2>What we are and what we aren&apos;t</H2>
 
         <P>
-          Mirret is a managed service, not a self-service platform. This is a
-          deliberate choice and it&apos;s worth explaining why.
+          Mirret is a managed service, not a self-service platform. This
+          is deliberate.
         </P>
 
         <P>
-          The conventional VC-backed approach to this market would be to build a
-          dashboard, sell seats, and let customers manage their own scanning
-          and takedowns. That&apos;s a good way to build a scalable business.
-          It&apos;s a terrible way to solve the actual problem.
+          The typical approach to this market is to build a dashboard,
+          sell seats, and let customers manage their own scanning and
+          takedowns. That&apos;s a good way to build a scalable software
+          business. It&apos;s a terrible way to actually solve the
+          problem.
         </P>
 
         <P>
-          The problem with dashboards is that they transfer the operational
-          burden back to the customer. You still need someone to log in, review
-          findings, investigate false positives, draft takedown requests, track
-          their progress, and follow up when they stall. Most companies
-          don&apos;t have someone whose job that is. So the dashboard goes
-          unused, the subscription gets cancelled, and the threats keep running.
+          Dashboards transfer the operational burden back to you. Someone
+          on your team still has to log in, review findings, investigate
+          false positives, draft takedown requests, track progress, and
+          follow up when things stall. Most e-commerce teams don&apos;t
+          have someone whose job that is. So the dashboard goes unused,
+          the subscription gets cancelled, and the fake stores keep
+          running.
         </P>
 
         <P>
-          We chose differently. We run the scans. We verify the threats. We
-          file the takedowns. We track the resolutions. You get a weekly report
-          with what we found, what we did about it, and what happened. If
-          something is urgent, you hear from us immediately. The output is
-          not a dashboard you have to manage. It&apos;s a problem that gets
-          smaller every week.
+          We chose differently. We run the scans. We verify the threats.
+          We file the takedowns. We track the resolutions. You get a
+          weekly report: what we found, what we did about it, and what
+          happened. If something is urgent, you hear from us immediately.
+          The output is not a dashboard you have to manage. It&apos;s a
+          problem that gets smaller every week.
         </P>
 
         <P>
-          This means we&apos;re not for everyone. If you want to run your own
-          operations in-house and just need scanning data, there are good tools
-          for that. We&apos;re for the companies that want the problem solved,
-          not just made visible.
-        </P>
-
-        <H2>Why AI-native, not AI-adjacent</H2>
-
-        <P>
-          Every security company claims to use AI now. Most of them mean
-          they&apos;ve added a machine learning model to one stage of their
-          existing pipeline. That&apos;s fine as far as it goes. But
-          there&apos;s a meaningful difference between a company that uses AI
-          as a feature and a company that was designed from the ground up around
-          what AI makes newly possible.
+          Can we guarantee every takedown succeeds? No. Anyone who tells
+          you they can is lying &mdash; platforms and registrars make the
+          final call. What we guarantee is speed, persistence, and the
+          right escalation path for every type of threat. In practice,
+          this resolves the vast majority of cases. When it doesn&apos;t,
+          we tell you directly and work with you on the next step.
         </P>
 
         <P>
-          Almost everything in external attack surface management is pattern
-          recognition at scale. Scanning certificate transparency logs for
-          suspicious registrations. Diffing DNS records to catch infrastructure
-          changes. Scoring visual similarity between a real brand page and a
-          fake. Classifying page intent from content and layout. Determining
-          whether a new domain is a legitimate partner or a threat. Prioritising
-          which takedown to file first based on active financial harm.
-        </P>
-
-        <P>
-          These tasks are tedious, repetitive, and require processing volumes
-          of data that no analyst team can handle. They are exactly the shape of
-          problem that AI was built to solve. Not the creative, nuanced, chatbot
-          kind of AI. The boring, reliable, classification-and-prioritisation
-          kind. The kind that works.
-        </P>
-
-        <P>
-          What does need humans is the judgement calls. Is this domain a
-          franchise partner or a threat? Should we go to the registrar or the
-          payment processor first? Is this edge case worth escalating at 2am?
-          We put experienced people exactly where they add value &mdash; at
-          the decision layer &mdash; and machines everywhere else. Most companies
-          in this space have it backwards.
+          This means we&apos;re not for everyone. If you want to run
+          brand protection in-house and just need scanning data, there are
+          good tools for that. We&apos;re for the brands that want the
+          problem solved, not just made visible.
         </P>
 
         <H2>Why now</H2>
 
         <P>
-          Two shifts happened recently that made this company necessary and
-          possible, in that order.
+          Two things happened recently that made this company both
+          necessary and possible, in that order.
         </P>
 
         <P>
-          The first is that generative AI made impersonation trivially easy.
-          Cloning a brand&apos;s visual identity used to require design skills
-          and time. Now you can produce a convincing replica of any website in
-          an afternoon with off-the-shelf tools. The volume and quality of
-          impersonation attacks has grown dramatically. Across our client base,
-          the trend is steep and accelerating. This is the new normal, not a
-          temporary spike.
+          The first is that AI made impersonation trivially cheap. Cloning
+          a brand&apos;s visual identity used to require design skills and
+          time. Now anyone can produce a convincing replica of any
+          storefront in an afternoon. AI-powered tools can replicate
+          entire product catalogs &mdash; images, descriptions, layouts
+          &mdash; in hours. Phishing kits sell for as little as $50.
+          AI-enabled fraud is projected to grow from $12.3 billion in 2023
+          to $40 billion by 2027. The trend is steep and accelerating.
         </P>
 
         <P>
-          The second is that the same AI capabilities that make attacks easier
-          also make automated defence possible at a scale that wasn&apos;t
-          feasible before. Visual similarity scoring, content classification,
-          continuous monitoring across millions of data points &mdash; the
-          building blocks exist now. They just need to be assembled by people
-          who understand both the security domain and how to build reliable
-          AI systems. Not chatbots. Systems.
+          The second is that the same AI capabilities that make attacks
+          cheaper also make automated defence possible at a scale that
+          wasn&apos;t feasible before. Visual similarity scoring, content
+          classification, continuous monitoring across millions of domains
+          and listings. The building blocks exist now. They need to be
+          assembled by people who understand both brand protection and how
+          to build reliable systems.
         </P>
 
         <P>
-          We think there&apos;s a narrow window where the companies that build
-          AI-native defence define the category. In a few years, every
-          serious brand will have continuous external attack surface monitoring.
-          The question is whether that monitoring will be good enough to
-          actually protect people.
+          We think there&apos;s a narrow window where the companies that
+          build AI-native defence define the category. In a few years,
+          every serious brand will have continuous monitoring for
+          impersonation. The question is whether that monitoring will be
+          good enough to actually protect customers.
         </P>
 
         <H2>The name</H2>
 
         <P>
-          Mirret comes from &ldquo;mirror.&rdquo; The whole problem we work on
-          is about reflections &mdash; someone creating a mirror of your brand
-          to deceive your customers. We find the mirrors. Then we break them.
+          Mirret comes from &ldquo;mirror.&rdquo; The whole problem we
+          work on is about reflections &mdash; someone creating a mirror
+          of your brand to deceive your customers. We find the mirrors.
+          Then we break them.
         </P>
 
         <div className="mt-24 border-t border-white/[0.08] pt-12">
           <p className="text-[15px] leading-[1.7] text-white/[0.5]">
-            We&apos;ll scan your external attack surface for free. No sales
-            call, no commitment. If there are threats impersonating your brand
+            We&apos;ll scan your brand&apos;s exposure for free. No sales
+            call, no commitment. If someone is impersonating your brand
             right now, you&apos;ll know in minutes.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:gap-4">

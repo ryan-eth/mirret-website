@@ -119,7 +119,7 @@ const features = [
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-[140px]">
+    <section className="relative pt-28 md:pt-[140px]">
       {/* Part 1: Surface Monitor Label */}
       <div className="flex items-center justify-center gap-2">
         <MirretMark size={18} />
@@ -130,39 +130,59 @@ export default function HeroSection() {
 
       {/* Part 2: Main Heading */}
       <h1
-        className="mx-auto mt-6 max-w-[800px] text-center text-[36px] leading-[1.1] font-light text-white md:text-[60px] font-heading"
+        className="mx-auto mt-6 max-w-[800px] px-6 text-center text-[28px] leading-[1.25] font-normal text-white md:text-[60px] md:leading-[1.1] md:font-light font-heading"
       >
         See every threat to your brand before it reaches your customers
       </h1>
 
-      {/* Part 3: Body Text + Feature Pills Row */}
-      <div className="mx-auto mt-12 flex max-w-[1000px] flex-col items-start gap-10 px-6 md:flex-row md:items-start md:justify-between md:gap-6">
-        {/* Left side: Body text */}
-        <p className="max-w-[320px] text-[15px] leading-[1.7] text-white/[0.61]">
+      {/* Part 3: Body text — short + centered on mobile only */}
+      <p className="mx-auto mt-6 max-w-[540px] px-6 text-center text-[15px] leading-[1.7] text-white/[0.65] md:hidden">
+        Mirret scans domains, ads, marketplaces, and social platforms to detect
+        impersonation before it causes harm — then enforces takedowns on your behalf.
+      </p>
+
+      {/* CTA — visible on mobile, hidden on desktop (desktop CTA is in navbar) */}
+      <div className="mt-8 flex justify-center px-6 md:hidden">
+        <a
+          href="https://report.mirret.co.uk"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full max-w-[340px] rounded-full bg-white py-3.5 text-center text-[15px] font-medium text-[#0f0e0d] transition-opacity duration-200 hover:opacity-90"
+        >
+          Generate Free Report
+        </a>
+      </div>
+
+      {/* Part 3b: Feature pillars */}
+      <div className="mx-auto mt-8 flex max-w-[1000px] flex-col gap-6 px-6 md:mt-12 md:flex-row md:justify-between md:gap-6">
+        {/* Desktop: body text sits as first column */}
+        <p className="hidden text-[15px] leading-[1.7] text-white/[0.65] md:block md:max-w-[320px]">
           Mirret continuously scans domains, ads, marketplaces, and social
           platforms to detect impersonation signals before they cause harm.
           Surface Monitor makes it easy to configure, verify, and act on every
           threat across your external attack surface.
         </p>
 
-        {/* Right side: Feature cards */}
-        <div className="flex flex-col gap-8 md:flex-row md:gap-6">
+        {/* Feature cards */}
+        <div className="flex flex-col gap-5 md:flex-row md:gap-6">
           {features.map((feature) => (
-            <div key={feature.title} className="flex max-w-[200px] flex-col gap-2.5">
-              <div className="mb-0.5">{feature.icon}</div>
-              <h3 className="text-sm font-medium text-white">
-                {feature.title}
-              </h3>
-              <p className="text-[13px] leading-[1.5] text-white/[0.45]">
-                {feature.description}
-              </p>
+            <div key={feature.title} className="flex flex-row items-start gap-3 md:max-w-[200px] md:flex-col md:gap-2.5">
+              <div className="shrink-0 mt-0.5 md:mb-0.5">{feature.icon}</div>
+              <div>
+                <p className="text-sm font-medium text-white">
+                  {feature.title}
+                </p>
+                <p className="mt-1 text-sm leading-[1.5] text-white/[0.55] md:mt-2">
+                  {feature.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       {/* Part 4: Canvas Mockup Image */}
-      <div className="relative mx-auto mt-[60px] max-w-[1100px] px-6">
+      <div className="relative mx-auto mt-10 max-w-[1100px] px-6 md:mt-[60px]">
         {/* Video background glow */}
         <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
           <video

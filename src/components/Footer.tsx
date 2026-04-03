@@ -65,10 +65,10 @@ function FooterLinkColumn({
 }) {
   return (
     <div>
-      <h4 className="mb-4 text-[11px] uppercase tracking-[0.15em] text-white/[0.45]">
+      <p className="mb-2 text-[12px] uppercase tracking-[0.15em] text-white/[0.55]">
         {title}
-      </h4>
-      <ul className="flex flex-col">
+      </p>
+      <ul className="flex flex-col -mx-2">
         {links.map((link) => (
           <li key={link.label}>
             <a
@@ -76,7 +76,7 @@ function FooterLinkColumn({
               {...(link.href.startsWith("http") || link.href.startsWith("mailto")
                 ? { target: "_blank", rel: "noopener noreferrer" }
                 : {})}
-              className="text-sm leading-[2.2] text-white/[0.61] transition-colors duration-200 hover:text-white"
+              className="inline-block px-2 py-1.5 text-[15px] leading-normal text-white/[0.65] transition-colors duration-200 hover:text-white"
             >
               {link.label}
             </a>
@@ -90,7 +90,7 @@ function FooterLinkColumn({
 export default function Footer() {
   return (
     <footer className="border-t border-white/[0.08]">
-      <div className="mx-auto max-w-[1200px] px-6 py-[60px]">
+      <div className="mx-auto max-w-[1200px] px-6 py-10 md:py-16">
         {/* Row 1: Main footer content */}
         <div className="flex flex-col justify-between gap-12 md:flex-row">
           {/* Left column */}
@@ -102,7 +102,7 @@ export default function Footer() {
             {/* Compliant label */}
             <div className="flex items-center gap-2">
               <span className="inline-block h-2 w-2 rounded-full bg-[#a3e635]" aria-hidden="true" />
-              <span className="text-[11px] uppercase tracking-[0.15em] text-white/[0.45]">
+              <span className="text-[12px] uppercase tracking-[0.15em] text-white/[0.55]">
                 Compliant
               </span>
             </div>
@@ -130,12 +130,12 @@ export default function Footer() {
                 height={40}
                 className="rounded-full border border-white/[0.12]"
               />
-              <span className="ml-1 text-sm text-white/[0.45]">5+</span>
+              <span className="ml-1 text-sm text-white/[0.55]">5+</span>
             </div>
           </div>
 
           {/* Right side: Link columns */}
-          <div className="grid grid-cols-2 gap-10 md:grid-cols-3 md:gap-16">
+          <div className="grid grid-cols-3 gap-6 md:gap-16">
             <FooterLinkColumn title="Product" links={productLinks} />
             <FooterLinkColumn title="Company" links={companyLinks} />
             <FooterLinkColumn title="Resources" links={resourceLinks} />
@@ -144,15 +144,15 @@ export default function Footer() {
 
         {/* Row 2: Bottom bar */}
         <div className="mt-10 flex items-center justify-between border-t border-white/[0.08] pt-6">
-          <p className="text-[13px] text-white/[0.45]">
+          <p className="text-[13px] text-white/[0.55]">
             &copy; {new Date().getFullYear()} Mirret Ltd.
           </p>
-          <div className="flex items-center gap-3 text-white/[0.45]">
+          <div className="flex items-center gap-3 text-white/[0.55]">
             <a
               href="https://x.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-200 hover:text-white"
+              className="flex h-11 w-11 items-center justify-center rounded-lg transition-colors duration-200 hover:bg-white/[0.06] hover:text-white"
               aria-label="Follow Mirret on X"
             >
               <XIcon />
@@ -162,7 +162,7 @@ export default function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors duration-200 hover:text-white"
+              className="flex h-11 w-11 items-center justify-center rounded-lg transition-colors duration-200 hover:bg-white/[0.06] hover:text-white"
               aria-label="Follow Mirret on LinkedIn"
             >
               <LinkedInIcon />

@@ -116,6 +116,18 @@
   button {
     cursor: pointer;
   }
+
+  /* Focus-visible ring for all interactive elements */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #06b6d4;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
 /* Mirret gradient backgrounds */
